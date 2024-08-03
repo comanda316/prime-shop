@@ -1,0 +1,144 @@
+/* Стили для хедера */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+    /* Устанавливаем фиксированную высоту для хедера */
+}
+
+.logo {
+    margin-left: 15px;
+    /* Отступ слева для логотипа */
+}
+
+.logo img {
+    max-height: 60px;
+    /* Логотип занимает всю высоту хедера, но не выходит за её пределы */
+    vertical-align: middle;
+    /* Центрируем логотип вертикально */
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+    line-height: 70px;
+    /* Выравниваем текст по вертикали в соответствии с высотой хедера */
+}
+
+.nav-menu ul li a:hover {
+    color: #F46C22;
+}
+
+.header-buttons .btn {
+    padding: 10px 20px;
+    color: white;
+    background-color: #F46C22;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+    line-height: 70px;
+    /* Выравниваем кнопки по вертикали */
+}
+
+.header-buttons .btn-login {
+    background-color: transparent;
+    border: 2px solid #F46C22;
+}
+
+.header-buttons .btn-login:hover,
+.header-buttons .btn-register:hover {
+    background-color: #F46C22;
+}
+
+/* Style The Dropdown Button */
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    /* Убираем цвет фона */
+    color: white;
+    /* Белый цвет текста */
+    padding: 10px;
+    /* Соответствует стилю кнопок в хедере */
+    font-size: 16px;
+    /* border: 2px solid white; */
+    /* Белая рамка, соответствующая стилю кнопок */
+    /* border-radius: 4px; */
+    /* Добавляем скругление углов, как у кнопок */
+    cursor: pointer;
+    line-height: 50px;
+    /* Выравнивание текста по вертикали */
+    transition: background-color 0.3s, color 0.3s;
+    /* Плавный переход для фона и текста */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    /* Соответствует стилю кнопок */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    /* Плавный переход при наведении */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #F46C22;
+    /* Используем основной цвет для фона при наведении */
+    color: white;
+    /* Цвет текста при наведении */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the text color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    color: #F46C22;
+    /* Цвет текста при наведении на dropdown */
+    border-color: #F46C22;
+    /* Цвет рамки при наведении на dropdown */
+}
