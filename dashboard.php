@@ -1,5 +1,7 @@
 <?php
 include 'lang.php';
+include 'header.php';
+include 'language.php';
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
@@ -10,7 +12,6 @@ if (!isset($_SESSION['user_id'])) {
 $role = $_SESSION['role'];
 ?>
 <!DOCTYPE html>
-<html lang="ka">
 
 <head>
     <meta charset="UTF-8">
@@ -21,9 +22,6 @@ $role = $_SESSION['role'];
     <h1><?php echo $lang['dashboard']; ?></h1>
     <nav>
         <a href="logout.php"><?php echo $lang['logout']; ?></a>
-        <a href="dashboard.php?lang=ka">ქართული</a>
-        <a href="dashboard.php?lang=en">English</a>
-        <a href="dashboard.php?lang=ru">Русский</a>
     </nav>
 
     <?php if ($role == 'admin'): ?>

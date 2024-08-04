@@ -1,3 +1,9 @@
+<?php
+session_start(); // Запуск сессии
+
+// Проверьте, авторизован ли пользователь
+$is_logged_in = isset($_SESSION['user_id']);
+?>
 <!DOCTYPE html>
 <html lang="<?php echo $lang_code; ?>">
 
@@ -31,8 +37,12 @@
                 </ul>
             </nav>
             <div class="header-buttons">
-                <a class="btn btn-register" href="register.php"><?php echo $lang['register']; ?></a>
-                <a class="btn btn-login" href="login.php"><?php echo $lang['login']; ?></a>
+                <?php if (!$is_logged_in): ?>
+                    <a class="btn btn-register" href="register.php"><?php echo $lang['register']; ?></a>
+                    <a class="btn btn-login" href="login.php"><?php echo $lang['login']; ?></a>
+                <?php else: ?>
+                    <a class="btn btn-logout" href="logout.php"><?php echo $lang['logout']; ?></a>
+                <?php endif; ?>
             </div>
         </div>
     </header>

@@ -1,5 +1,6 @@
 <?php include 'lang.php'; ?>
 <?php include 'header.php'; ?>
+<?php include 'language.php'; ?>
 <!DOCTYPE html>
 <html lang="ka">
 
